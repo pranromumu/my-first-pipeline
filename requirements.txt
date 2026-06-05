@@ -2,3 +2,8 @@ fastapi
 uvicorn 
 pytest 
 httpx 
+fastapi 
+uvicorn 
+pytest 
+httpx 
+pytest-cov 
