@@ -1,0 +1,10 @@
+pyproject.toml
+my_first_pipeline.egg-info/PKG-INFO
+my_first_pipeline.egg-info/SOURCES.txt
+my_first_pipeline.egg-info/dependency_links.txt
+my_first_pipeline.egg-info/top_level.txt
+src/__init__.py
+src/main.py
+src/utils.py
+tests/test_main.py
+tests/test_utils.py
