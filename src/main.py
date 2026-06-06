@@ -6,6 +6,11 @@ app = FastAPI()
 GREETING_PREFIX = os.getenv("GREETING_PREFIX", "Hello")
 
 
+@app.get("/health")
+async def health_check():
+    return {"status": "ok"}
+
+
 @app.get("/hello/{name}")
 async def hello(name: str):
     greeting = f"{GREETING_PREFIX} {name}"
