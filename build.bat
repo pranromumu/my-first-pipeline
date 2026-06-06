@@ -12,7 +12,7 @@ echo [2.5/4] Running dependency security scan...
 pip-audit --requirement requirements.txt
 if errorlevel 1 exit /b 1
 echo [3/4] Running tests with coverage...
-pytest tests/ -v --cov=src --cov-report=term-missing --cov-fail-under=80
+pytest tests/ -v --cov=src --cov-report=term-missing --cov-report=xml --cov-fail-under=80
 if errorlevel 1 exit /b 1
 echo [4/4] Build SUCCESS!
 pause
