@@ -12,3 +12,4 @@ flake8
 safety
 pip-audit
 pre-commit
+python-json-logger 

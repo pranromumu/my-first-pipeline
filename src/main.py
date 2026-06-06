@@ -1,5 +1,14 @@
 import os
+import logging
 from fastapi import FastAPI
+from pythonjsonlogger import jsonlogger
+
+logger = logging.getLogger()
+logHandler = logging.StreamHandler()
+formatter = jsonlogger.JsonFormatter()
+logHandler.setFormatter(formatter)
+logger.addHandler(logHandler)
+logger.setLevel(logging.INFO)
 
 app = FastAPI()
 
@@ -14,6 +23,10 @@ async def health_check():
 @app.get("/hello/{name}")
 async def hello(name: str):
     greeting = f"{GREETING_PREFIX} {name}"
+    logger.info(
+    f"Greeting generated: {greeting}",
+    extra={"name": name, "greeting": greeting}
+)
     return {"message": greeting}
 
 
