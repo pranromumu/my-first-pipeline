@@ -24,9 +24,12 @@ async def health_check():
 async def hello(name: str):
     greeting = f"{GREETING_PREFIX} {name}"
     logger.info(
-    f"Greeting generated: {greeting}",
-    extra={"name": name, "greeting": greeting}
-)
+        f"Greeting generated: {greeting}",
+        extra={
+            "name": name,
+            "greeting": greeting
+        }
+    )
     return {"message": greeting}
 
 
