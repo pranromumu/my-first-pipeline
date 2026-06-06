@@ -14,7 +14,7 @@ install:
 	pip install -r requirements.txt
 
 lint:
-	flake8 src/ tests/
+	flake8 src/ tests/ --max-line-length=100
 	black --check src/ tests/
 
 test:
