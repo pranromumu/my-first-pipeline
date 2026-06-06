@@ -9,9 +9,6 @@ flake8 src/ tests/
 black --check src/ tests/
 if errorlevel 1 exit /b 1
 echo [2.5/4] Running dependency security scan...
-safety check --full-report
-if errorlevel 1 exit /b 1
-echo [2.5/4] Running dependency security scan...
 pip-audit --requirement requirements.txt
 if errorlevel 1 exit /b 1
 echo [3/4] Running tests with coverage...
